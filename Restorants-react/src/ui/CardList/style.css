@@ -1,0 +1,43 @@
+.loading {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-list {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.notice {
+    position: absolute;
+    right: -80px;
+    background-color: #fff0e7;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(253, 193, 171);
+    color: rgb(150, 75, 48);
+    font-family: system-ui;
+    animation: showNotice 3s ease-in-out;
+}
+
+@keyframes showNotice {
+    0% {
+        opacity: 0;
+        top: -100px;
+    }
+
+    50% {
+        opacity: 1;
+        top: -75px;
+    }
+
+    100% {
+        opacity: 0;
+        top: -50px;
+    }
+
+}

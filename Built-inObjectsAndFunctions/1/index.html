@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modal">
+        <img class="modal-img">
+        <div class="modal-wrap">
+            <h3 class="modal-message"></h3>
+            <button class="modal-btn">Отлично!</button>
+        </div>
+    </div>
+
+    <script>
+
+const giftArr = [
+ {
+   title: "Скидка 20% на первую покупку в нашем магазине!",
+   icon: "img/gift-3.svg"
+ },
+ {
+   title: "Скидка 10% на всё!",
+   icon: "img/tag-discount.svg"
+ },
+ {
+   title: "Подарок при первой покупке в нашем магазине!",
+   icon: "img/gift.svg"
+ },
+ {
+   title: "Бесплатная доставка для вас!",
+   icon: "img/delivery.svg"
+ },
+ {
+   title: "Сегодня день больших скидок!",
+   icon: "img/valentine-gift.svg"
+ }
+]
+
+const modalBox = document.querySelector('.modal');
+const image = document.querySelector('.modal-img');
+const title = document.querySelector('.modal-message');
+const buttonClose = document.querySelector('.modal-btn');
+
+  function createRandomGift(arr) {
+      const numberRandom = (min, max) => {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      const numberGift = numberRandom(0, (arr.length - 1));
+      return [arr[numberGift], numberGift];
+  }
+
+  function renderGift(arr2) {
+    //отрисовываем объекты в теги +  обработка кнопки
+    image.setAttribute('src', `${arr2[0].icon}`);
+    title.textContent = arr2[0].title;
+
+    //меняем цвет кнопок
+
+    if (arr2[1] <= 1) {
+      buttonClose.style.background =  'rgb(230, 230, 147)';
+    } else if (arr2[1] > 1 && arr2[1] <= 3) {
+      buttonClose.style.background = 'rgb(128, 186, 235)';
+    } else  {
+      buttonClose.style.background = 'rgb(245, 155, 214)';
+    };
+
+    buttonClose.addEventListener('click', () => {
+      modalBox.style.display = 'none';
+    })
+  }
+
+  const showModal = () => renderGift(createRandomGift(giftArr));
+
+  setTimeout(() =>  {
+    showModal();
+    modalBox.style.display = 'flex';
+  }, 2000);
+
+  </script>
+    
+</body>
+</html>

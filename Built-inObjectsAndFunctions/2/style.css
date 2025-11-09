@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(192, 207, 216);
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.promo{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 0 auto;
+    top: 0;
+    max-width: 400px;
+    min-height: 50px;
+    padding: 20px;
+    padding-left: 40px;
+    transform: translateY(50%);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.modal-input {
+    font-family: Verdana, Tahoma, sans-serif;
+    padding: 10px 10px;
+    border: 1px solid rgb(144, 144, 144);
+    font-size: 16px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.modal-input:focus-visible {
+    outline: none;
+}
+
+
+.modal-btn {
+    font-family: Verdana, Tahoma, sans-serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background:  rgb(143, 177, 250);
+    cursor: pointer;
+}
+
+span {
+    font-weight: 700;
+}
+

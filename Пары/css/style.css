@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 50px;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((100% -  10vw * 3) / 3);
+    height: 30vh;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 45px;
+    background-color: rgb(159, 146, 124);
+    color: transparent;
+    border: 1px solid rgb(68, 87, 15);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color .4s ease-in-out, color .4s ease-in-out, transform 0.2s;
+}
+
+.card.open {
+    background-color: rgb(235, 224, 208);
+    color: #61533f;
+    transform: scale(0.97);
+}
+
+.card.success {
+    background-color: rgb(90, 132, 53);
+    color: #ffffff;
+    cursor: none;
+    transform: scale(0.97);
+}
+
+
+#countdown{
+    display: block;
+    position: absolute;
+    padding: 5px;
+    width: 120px;
+    height: 50px;
+    top: 40px;
+    right: 70px;
+    text-align: center;
+    background-color:rgb(237, 203, 190);
+    color: rgb(173, 15, 15);
+    font-size: 28px;
+    border-radius: 5px;
+}
+
+.label {
+    display: inline;
+    width: 100%;
+}
+.label:nth-of-type(1) {
+    margin-bottom: 1px;
+}
+
+.input-group {
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+.start {
+    margin-bottom: 25px;
+}
+
+.game-success {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.restart-btn {
+    display: block;
+    padding: 10px 15px;
+    background-color: rgb(183, 247, 44);
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    border: 1px solid rgb(194, 208, 178);
+    box-shadow: 0 0 20px rgb(153, 234, 48);
+    cursor: pointer;
+}
+
+.win_descr:nth-of-type(1) {
+    margin-bottom: 25px;
+}
+
+
+
+
+
+

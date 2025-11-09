@@ -1,0 +1,14 @@
+.notes-container {
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1000px;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.errorMessage {
+    font-size: 14px;
+    color: rgb(215, 5, 5);
+}

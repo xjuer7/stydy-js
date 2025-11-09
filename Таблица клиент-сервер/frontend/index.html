@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer type="module" src="js/main.js"></script>
+    <script defer type="module" src="js/student.js"></script>
+</head>
+<body>
+    <section >
+        <div class="container ">
+            <button type="button" class="btn-main" id="btn" aria-expanded="false">Добавить студента</button>
+
+            <!-- фильтр -->
+            <div class="filter-wrap">
+                <form action="" id="filter-form" class="filter-form">
+                    <input type="text"  class="inp-filt" placeholder="ФИО" id="inp-fio">
+                    <input type="text"  class="inp-filt" placeholder="Факультет" id="inp-facul">
+                    <input type="number"  class="inp-filt inp-date" placeholder="Дата начала обучения" id="inp-dateStart">
+                    <input type="number"  class="inp-filt inp-date" placeholder="Дата окончания обучения" id="inp-dateEnd">
+                    <button type="submit" class="btn-filt">Фильтр</button>
+                    <button type="reset" class="btn-filt" id="btn-filt-reset">Сбросить</button>
+                </form>
+            </div>
+
+            <!-- таблица -->
+            <div class="table-responsive">
+                <table class="table table-striped students-table" id="table">
+                    <thead class="table-light">
+                        <th data-column="fio">Фамилия Имя Отчество</th>
+                        <th data-column="faculty">Факультет</th>
+                        <th data-column="birthDate">Дата рождения</th>
+                        <th data-column="education">Годы обучения</th>
+                        <th data-column="delete"></th>
+                    </thead>
+                    <tbody id="students-list" class="table-group-divider">
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- карточка студента -->
+            <div class="student-form" id="student-form">
+                <div class="header-form-wrap">
+                    <h2 class="card-title">Карточка студента</h2>
+                    <svg class="escape" id="escape" width="29" height="29" viewBox="0 0 29 29"  xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2333 7.73333L21.2667 6.76666L14.5 13.5334L7.7333 6.7667L6.76664 7.73336L13.5333 14.5L6.76666 21.2667L7.73333 22.2333L14.5 15.4667L21.2666 22.2334L22.2333 21.2667L15.4666 14.5L22.2333 7.73333Z"/>
+                        </svg>
+                </div>
+                
+                <form action="post" class="student-cart" id="add-student">
+                    <div class="input-wrap">
+                        <label for="input">Фамилия</label>
+                        <input type="text" class="input" id="surname" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="input">Имя</label>
+                        <input type="text" class="input" id="name" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="input">Отчество</label>
+                        <input type="text" class="input" id="lastname" required>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="input">Факультет</label>
+                        <input type="text" class="input input-faculty" id="faculty" required>
+                    </div>
+                    <div class="date-wrap">
+                        <div class="input-wrap">
+                            <label for="input input-date">Дата рождения</label>
+                            <input type="date" class="input" id="birthday" required min="1900-01-01">
+                        </div>
+                        <div class="input-wrap input-date">
+                            <label for="input">Год начала обучения</label>
+                            <input type="number" class="input" id="studyStart" required min="2000">
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="submit" id="btn-form">Добавить</button>
+                        <button type="reset" id="btn-reset">Очистить</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- всплывающее окошко удаления -->
+            <div class="prompt" id="prompt-container"></div>
+        </div>
+    </section>
+    
+</body>
+</html>

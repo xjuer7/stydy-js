@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="promo">
+        <div class="modal-wrap">
+            <input class="modal-input" type="text" placeholder="промокод">
+            <button class="modal-btn">Применить</button>
+        </div>
+    </div>
+
+    <script>
+
+        // Вспомогательная функция для получения данных из куки
+        function getCookie() {
+            return document.cookie.split('; ').reduce((acc, item) => {
+            const [name, value] = item.split('=')
+            acc[decodeURIComponent(name)] = decodeURIComponent(value)
+            return acc
+            }, {})
+        }
+
+        const promocodeObj = {
+            promocode: "PROM50",
+            gift: "Скидка 50%"
+        }
+        const inputEl = document.querySelector('.modal-input');
+        const buttonEl = document.querySelector('.modal-btn');
+
+        //красим правильный промокод и создаем текст скидки
+        function createPromoText() {
+            inputEl.style.color = 'green';
+
+            const span = document.createElement('span');
+            span.textContent = `Промокод применен. ${promocodeObj.gift}`;
+            span.classList.add('promoText')
+            span.style.color = 'green'
+            document.querySelector('.modal-wrap').append(span)
+        }
+
+        const cookie = getCookie()// Получение данных
+        if (cookie) {
+            inputEl.value = `${promocodeObj.promocode}`;
+            createPromoText();
+        }
+
+        inputEl.onfocus = function() {
+            inputEl.style.borderColor = 'rgb(143, 177, 250)'
+        }
+
+        buttonEl.addEventListener('click', () => {
+            if (inputEl.value.toUpperCase() == promocodeObj.promocode) {
+                //если валидацию промокод прошел, добавляем в куки 
+                document.cookie = `promocode=${promocodeObj.promocode}`;
+                createPromoText()
+            } else {
+                if(document.querySelector('.promoText')) {
+                    document.querySelector('.promoText').remove();
+                    inputEl.style.color = 'initial';
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

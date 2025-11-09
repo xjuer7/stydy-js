@@ -1,0 +1,222 @@
+body {
+    background-color: #D1DCE6;
+}
+
+.card {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 30px 0;
+    background-color: transparent;
+    border: none;
+    
+}
+
+.main-title {
+    font-family: sans-serif;
+    text-align: center;
+    letter-spacing: 0.02em;
+    font-weight: 600
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #9FAEBC;
+}
+
+input:hover {
+    border-color:  #0da495bb
+}
+
+input:focus-visible,
+input:active {
+    outline: none;
+    border-color:  #0c534ce0;
+}
+
+
+.btn-add {
+    background-color: #11786E;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 20px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    transition: background-color .3s ease;
+}
+.btn-add:hover, .btn-add:focus-visible,  .btn-add:active {
+    outline: none;
+    background-color: #189185;
+}
+
+.card-table {
+    max-width: 850px;
+}
+
+.center-wrap {
+    display: flex;
+    justify-content: space-between;
+    max-height: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.thead{
+    background-color: rgb(68, 68, 68);
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
+
+.thead .td-el {
+    padding: 12px 20px;
+}
+
+
+.list-tr .td-el {
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+.tdEmpty-thead {
+    min-width: 364px;
+}
+
+.button-delete {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: rgb(156, 13, 13);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    width: 160px;
+    transition: background-color .3s ease;
+}
+
+ .button-delete:focus-visible,  .button-delete:active {
+    outline: none;
+    background-color: rgb(184, 6, 6);
+}
+
+.button-edit {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: #0b8d80;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    width: 160px;
+    transition: background-color .3s ease;
+}
+
+ .button-edit:focus-visible,  .button-edit:active {
+    outline: none;
+    background-color: #0f9d8f;
+}
+
+#btn-edit {
+    background-color: #8f162c;
+}
+
+#btn-edit:hover, #btn-edit:focus-visible,  #btn-edit:active {
+    outline: none;
+    background-color: #bb1d3a;
+}
+
+.buttons-group {
+    margin-bottom: 0;
+    gap: 10px;
+}
+
+.search-input {
+    margin-bottom: 20px;
+    border-radius: 0;
+    background-color: #ffffffbc;
+    border: none;
+
+} 
+.description {
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.loader {
+    color: #11786E;
+    font-size: 45px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+  }
+  
+  @keyframes mltShdSpin {
+    0% {
+      box-shadow: 0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    5%,
+    95% {
+      box-shadow: 0 -0.83em 0 -0.4em, 
+      0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+    10%,
+    59% {
+      box-shadow: 0 -0.83em 0 -0.4em, 
+      -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, 
+      -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+    20% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+       -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, 
+       -0.749em -0.34em 0 -0.477em;
+    }
+    38% {
+      box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+       -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, 
+       -0.82em -0.09em 0 -0.477em;
+    }
+    100% {
+      box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 
+      0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+  }
+  
+  @keyframes round {
+    0% { 
+        transform: rotate(0deg) 
+    }
+    100% { 
+        transform: rotate(360deg) 
+    }
+  }
+   
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Давай задизайним твою карту</h1>
+    <form action="#">
+        <div class="custom-input">
+            <label for="fio">Ваше имя и фамилия</label>
+            <input type="text" id="fio" class="custom-input__value">
+        </div>
+        <div class="custom-input">
+            <label for="color">Цвет банковской карты</label>
+            <select name="color" id="color">
+                <option value="red">Красный</option>
+                <option value="blue">Синий</option>
+                <option value="green">Зеленый</option>
+            </select>
+        </div>
+    </form>
+    <div class="card">
+        <img src="img/white-card.png" class="img-card">
+        <p class="card-name"></p>
+    </div>
+    </div>
+
+    <script>
+    const select = document.querySelector('select');
+    const input = document.querySelector('.custom-input__value');
+    const pFio = document.querySelector('.card-name');
+    const img = document.querySelector('.img-card');
+
+
+    input.onfocus = function() {
+        this.classList.add('accent')
+    }
+    input.onblur = function() {
+        if(this.classList.contains('accent')) this.classList.remove('accent')
+    }
+
+
+    select.onfocus = function() {
+        this.classList.add('accent')
+    }
+    select.onblur = function() {
+        if(this.classList.contains('accent')) this.classList.remove('accent')
+    }
+
+    input.addEventListener('input', () => pFio.textContent = input.value)
+
+    select.addEventListener('change', () => {
+        pFio.style.color = '#fff';
+
+        if(select.value == 'red') {
+            img.setAttribute('src', 'img/red-card.png');
+        } else if(select.value == 'blue') {
+            img.setAttribute('src', 'img/blue-card.png');
+        } else if (select.value =='green'){
+            img.setAttribute('src', 'img/green-card.png');
+        }  
+    })
+
+    </script>
+    
+</body>
+</html>

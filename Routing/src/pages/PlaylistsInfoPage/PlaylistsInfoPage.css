@@ -1,0 +1,46 @@
+.playInfoPage h2, .playlists p {
+    color: aqua;
+}
+.playlists p {
+    margin: 0;
+}
+.playlists p:nth-child(2) {
+    padding-bottom: 15px;
+    border-bottom: 2px solid gray;
+}
+.playlists__track {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    list-style: none;
+    font-size: 15px;
+    color: aqua;
+}
+
+.playlists__genre {
+    display: flex;
+    gap: 5px;
+}
+
+ .playlists__btn {
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 8px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.playInfoPage  .playlists__btn  {
+    background-color: rgb(18, 100, 115);
+    font-size: 14px;
+}
+
+.playlists__btn:hover {
+    background-color: rgb(6, 116, 135);
+}
+.playlists__name {
+    font-weight: 700;
+}
+

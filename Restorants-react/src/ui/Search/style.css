@@ -1,0 +1,41 @@
+.card-search {
+    position: relative;
+    width: 100%;
+}
+.search-input {
+    position: relative;
+    width: 100%;
+    padding: 10px 15px;
+    padding-left: 50px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: rgba(188, 99, 99, 0.163);
+    color: rgb(145, 83, 83);
+    transition: background-color .3s ease-in;
+}
+
+.search-input:hover {
+    background-color: rgba(210, 154, 154, 0.163);
+}
+.search-input:focus-visible {
+    outline: 1px solid  rgb(145, 83, 83);
+}
+
+.search-input__icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+}
+.search-input__icon path {
+    stroke: rgb(145, 83, 83);
+}
+
+.search-input::placeholder {
+    color: rgb(145, 83, 83)
+}

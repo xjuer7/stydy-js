@@ -1,0 +1,74 @@
+body {
+    font-family: Verdana, sans-serif;
+    color: #fff;
+    background-color: rgb(34, 33, 33);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+    max-width: 800px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    color:  rgb(102, 172, 173);
+}
+
+form {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.custom-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-input__value, select {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(188, 248, 231);
+    border: none;
+    border: 2px solid rgb(76, 123, 124);
+    font-size: 14px;
+}
+
+select {
+    height: 31px;
+}
+
+.accent {
+    background-color: rgb(234, 250, 247);
+    border-color:  rgb(88, 97, 97);
+}
+
+.custom-input__value:focus-visible,
+select:focus-visible {
+outline: none;
+}
+
+.card {
+    position: relative;
+}
+
+.card-name {
+    margin: 0;
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+    max-width: 340px;
+}
+
